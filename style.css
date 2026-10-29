@@ -1,0 +1,165 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #263247;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background: linear-gradient(135deg, #173b70, #2878c8);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cabecalho h1 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.cabecalho p {
+    font-size: 1.1rem;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.introducao {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.introducao h2,
+.secao-cards h2 {
+    color: #173b70;
+    margin-bottom: 16px;
+}
+
+.introducao p {
+    font-size: 1rem;
+}
+
+/* Organização dos cards */
+.secao-cards h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 26px;
+    border-radius: 12px;
+    border-top: 5px solid #2878c8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.icone {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #173b70;
+    margin-bottom: 10px;
+}
+
+/* Classes específicas para cada card */
+.card-legibilidade {
+    border-top-color: #2878c8;
+}
+
+.card-organizacao {
+    border-top-color: #20a486;
+}
+
+.card-consistencia {
+    border-top-color: #e6a23c;
+}
+
+.card-manutenibilidade {
+    border-top-color: #8b5cf6;
+}
+
+.card-colaboracao {
+    border-top-color: #e66b76;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #173b70;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 20px;
+}
+
+.rodape p {
+    margin: 5px 0;
+}
+
+/* Ajustes para tablets e celulares */
+@media (max-width: 900px) {
+    .container-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho {
+        padding: 40px 18px;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.7rem;
+    }
+
+    .cabecalho p {
+        font-size: 1rem;
+    }
+
+    .conteudo {
+        padding: 25px 15px;
+    }
+
+    .introducao,
+    .card {
+        padding: 22px;
+    }
+}
